@@ -1,0 +1,23 @@
+
+<div *ngIf="customers.length; else noData">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Password</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let customer of customers">
+          <td>{{ customer.customerName }}</td>
+          <td>{{ customer.customerEmail }}</td>
+          <td>{{ customer.customerPassword }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <ng-template #noData>
+    <p>No customers to display.</p>
+  </ng-template>
+  
