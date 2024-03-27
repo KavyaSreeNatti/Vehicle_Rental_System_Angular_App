@@ -19,6 +19,9 @@ import { UpdateCustomerComponent } from './components/update-customer/update-cus
 import { DeleteCustomerComponent } from './components/delete-customer/delete-customer.component';
 import { ViewCustomersComponent } from './components/view-customers/view-customers.component';
 import { AddVehicleComponent } from './components/add-vehicle/add-vehicle.component';
+import { ViewVehiclesComponent } from './components/view-vehicles/view-vehicles.component';
+import { UpdateVehiclesComponent } from './components/update-vehicles/update-vehicles.component';
+import { DeleteVehicleComponent } from './components/delete-vehicle/delete-vehicle.component';
 
 
 
@@ -37,7 +40,10 @@ import { AddVehicleComponent } from './components/add-vehicle/add-vehicle.compon
     UpdateCustomerComponent,
     DeleteCustomerComponent,
     ViewCustomersComponent,
-    AddVehicleComponent
+    AddVehicleComponent,
+    ViewVehiclesComponent,
+    UpdateVehiclesComponent,
+    DeleteVehicleComponent
   ],
   imports: [
     BrowserModule,

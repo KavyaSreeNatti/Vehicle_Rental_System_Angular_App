@@ -1,0 +1,29 @@
+<div *ngIf="vehicle.length; else noData">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>vehicleId</th>
+          <th>rent</th>
+          <th>vehicleLocation</th>
+          <th>isAvailable</th>
+          <th>modelYear</th>
+          <th>modelName</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let vehicle of vehicle">
+          <td>{{ vehicle.vehicleId }}</td>
+          <td>{{ vehicle.rent }}</td>
+          <td>{{ vehicle.vehicleLocation}}</td>
+          <td>{{ vehicle.isAvailable}}</td>
+          <td>{{ vehicle.modelYear}}</td>
+          <td>{{ vehicle.modelName}}</td>
+         
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <ng-template #noData>
+    <p>No vehicles to display.</p>
+  </ng-template>
+  

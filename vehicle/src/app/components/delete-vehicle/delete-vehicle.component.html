@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card mt-5">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Delete Vehicle</h5>
+              <!-- Input for vehicle ID with validation -->
+              <input type="number" class="form-control mb-3" [(ngModel)]="vehicleId" name="vehicleId" #vehicleIdField="ngModel" min="1" placeholder="Enter Vehicle ID" required>
+              <div *ngIf="vehicleIdField.errors && (vehicleIdField.dirty || vehicleIdField.touched)" class="alert alert-danger">
+                <!-- Adjusted error access syntax -->
+                <div *ngIf="vehicleIdField.errors['required']">
+                  Vehicle ID is required.
+                </div>
+                <div *ngIf="vehicleIdField.errors['min']">
+                  Vehicle ID must be 1 or greater.
+                </div>
+              </div>
+              <button (click)="deleteVehicle()" [disabled]="vehicleIdField.invalid" class="btn btn-danger">Delete</button>
+              <!-- Success message -->
+              <div *ngIf="successMessage" class="alert alert-success mt-3">{{ successMessage }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>   
+  </div>
+  
