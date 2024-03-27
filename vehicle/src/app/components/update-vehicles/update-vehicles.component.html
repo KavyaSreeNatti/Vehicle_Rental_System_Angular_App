@@ -3,8 +3,8 @@
         <div class="col-md-6">
             <div class="card mt-5">
                 <div class="card-body">
-                    <h5 class="card-title text-center">ADD Vehicle</h5>
-                    <form (ngSubmit)="addVehicle()">
+                    <h5 class="card-title text-center">Update Vehicle</h5>
+                    <form (ngSubmit)="updateVehicle()">
                         <div class="mb-3">
                           <label for="vehicleId" class="form-label">Vehicle Id</label>
                           <input type="number" class="form-control" id="vehicleId" [(ngModel)]="vehicle.vehicleId" name="vehicleId" placeholder="Enter VehicleId" aria-describedby="makeHelp" min="0">
@@ -102,9 +102,7 @@
                             The model name must not contain numbers.
                           </div>
                         </div>
-                        
-
-                        <button type="submit" class="btn btn-primary">ADD</button>
+                         <button type="submit" class="btn btn-success">UPDATE</button>
                     </form>
                 </div>
             </div>

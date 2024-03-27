@@ -12,6 +12,11 @@ import { UpdateCustomerComponent } from './components/update-customer/update-cus
 import { DeleteCustomerComponent } from './components/delete-customer/delete-customer.component';
 import { ViewCustomersComponent } from './components/view-customers/view-customers.component';
 import { AddVehicleComponent } from './components/add-vehicle/add-vehicle.component';
+import { ViewVehiclesComponent } from './components/view-vehicles/view-vehicles.component';
+import { UpdateVehiclesComponent } from './components/update-vehicles/update-vehicles.component';
+import { DeleteVehicleComponent } from './components/delete-vehicle/delete-vehicle.component';
+
+
 
 const routes: Routes = [
   {path:'register/customer',component:RegisterComponent},
@@ -24,7 +29,11 @@ const routes: Routes = [
   {path: 'landing/admin/customer/update',component:UpdateCustomerComponent},
   {path: 'landing/admin/customer/delete',component:DeleteCustomerComponent},
   {path: 'landing/admin/customer/view',component:ViewCustomersComponent},
-  {path: 'landing/admin/vehicle/add',component:AddVehicleComponent}
+  {path: 'landing/admin/vehicle/add',component:AddVehicleComponent},
+  {path: 'landing/admin/vehicle/view',component:ViewVehiclesComponent},
+  {path: 'landing/admin/vehicle/update',component:UpdateVehiclesComponent},
+  {path: 'landing/admin/vehicle/delete',component:DeleteVehicleComponent},
+  {path:'landing/admin/vehicles/active',component:ActiveVehiclesComponent}
 ];
 
 @NgModule({
